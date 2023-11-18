@@ -1,0 +1,132 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+body {
+  position: relative;
+  color: white;
+  height: 100vh;
+  background: linear-gradient(
+    200.96deg,
+    #2afe7b -29.09%,
+    #578fdd 51.77%,
+    #2c9e6b 129.35%
+  );
+  font-family: sans-serif;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  appearance: none;
+  font-size: 1.3rem;
+  box-shadow:
+    0px 8px 28px -6px rgba(24, 39, 75, 0.12),
+    0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+  transition: all ease-in 0.1s;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  height: fit-content;
+  width: fit-content;
+  margin: 10px;
+}
+
+a:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+* {
+  text-align: center;
+  font-family: 'minecraft';
+  font-weight: normal;
+}
+
+.header {
+  background-color: rgb(34, 34, 34);
+  border-radius: 10px;
+  width: 50%;
+  margin-left: 25%;
+  display: grid;
+
+  padding: 10px;
+  box-sizing: border-box;
+
+  & img {
+    filter: invert(100%);
+  }
+  &-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 auto;
+  }
+}
+.footer {
+  display: flex;
+  height: 50px;
+  & button {
+    background-color: #2afe7b40;
+    border-color: rgba(44, 158, 107, 0.661);
+    color: white;
+    border-width: 2px;
+    border-style: solid;
+  }
+}
+
+img {
+  height: 50px;
+}
+
+.config {
+  background-color: #2afe7b40;
+  border-color: rgba(44, 158, 107, 0.661);
+  border-radius: 15px;
+  transition: all 0.2s;
+  padding: 5px;
+  box-sizing: border-box;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.centrar-imagen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  filter: blur(3px);
+  display: block;
+}
+
+.box-list {
+  width: 50%;
+  background-color: rgb(46, 46, 46);
+  margin: auto;
+  border-radius: 10px;
+  height: 60vh;
+}
