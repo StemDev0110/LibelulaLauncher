@@ -1,0 +1,405 @@
+.minecraft-header {
+  background-color: #272727;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.header-logo img {
+  width: auto;
+  height: 5vh;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.header-nav ul li {
+  margin-right: 20px;
+}
+
+.header-nav ul li:last-child {
+  margin-right: 0;
+}
+
+.header-nav ul li a {
+  font-family: "MinecraftTen", sans-serif;
+  font-size: larger;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.header-nav ul li a:hover {
+  color: #00ff6a; /* Cambia el color al pasar el mouse por encima */
+}
+.icon-launcher {
+  image-rendering: pixelated;
+}
+
+/* Estilos para el footer */
+.minecraft-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  max-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.minecraft-footer img {
+  width: 5%;
+}
+
+.footer-version {
+  display: grid;
+  align-items: center;
+}
+
+.footer-version label {
+  font-family: "MinecraftBold";
+  margin-right: 10px;
+}
+
+#version-select {
+  font-family: "Minecraftory";
+  font-weight: normal;
+  font-size: small;
+  padding: 5px;
+  background-color: #444;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+#version-p-select {
+  font-family: "Minecraftory";
+  font-weight: normal;
+  font-size: small;
+  padding: 5px;
+  background-color: #444;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+
+.start-button {
+  background-color: #00d748;
+  border: #00ffa2;
+  color: #fff;
+  border: none;
+  padding: 10px 20px 20px;
+  outline: none;
+  cursor: pointer;
+  font-family: "MinecraftTen", sans-serif;
+  font-size: xx-large;
+}
+
+.start-button:hover {
+  background-color: rgb(0, 183, 116);
+}
+.desactivatedlaunch {
+  background-color: #048643;
+  border: #04af48;
+  color: #fff;
+  border: none;
+  padding: 10px 20px 20px;
+  outline: none;
+  cursor: not-allowed;
+  font-family: "MinecraftTen", sans-serif;
+  font-size: xx-large;
+}
+
+.desactivatedlaunch:hover {
+  background-color: #056b30;
+}
+.playerName {
+  font-family: "MinecraftRegular";
+  color: white;
+}
+
+/* Estilos para el sidebar */
+.minecraft-sidebar {
+  background-color: #333;
+  color: #fff;
+  width: 200px;
+  height: 65vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+  overflow-y: auto;
+}
+
+.minecraft-sidebar::-webkit-scrollbar {
+  width: 8px; /* Ancho del scrollbar */
+}
+
+.minecraft-sidebar::-webkit-scrollbar-thumb {
+  background-color: #848484;
+  border-radius: 10px;
+}
+
+.settings h2 {
+  font-size: larger;
+  font-weight: normal;
+  color: white;
+  font-family: "MinecraftTen";
+  transition: color 0.3s ease;
+}
+.settings h2:hover {
+  color: #09e360;
+  cursor: pointer;
+}
+.settings-icon {
+  width: 25px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: 25px;
+  margin-right: 10px; /* Ajusta el espacio entre la imagen y el texto */
+  image-rendering: pixelated;
+  margin-top: 15px;
+  /* Otros estilos de imagen según sea necesario */
+}
+.settings {
+  display: grid; /* Utiliza flexbox para alinear la imagen y el texto en línea */
+  align-items: center; /* Centra verticalmente los elementos */
+  /* ... otros estilos ... */
+}
+.settings-buttons {
+  display: grid;
+}
+.setting-button {
+  position: relative;
+  background: none;
+  border: none;
+  font-weight: normal;
+  font-size: medium;
+  font-family: "MinecraftBold", sans-serif;
+  padding-left: 20px;
+  outline: none;
+  transition: color 0.3s;
+}
+
+.setting-button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  border: 1px solid white; /* Borde de 1px de color blanco */
+  background-color: transparent; /* Sin fondo de color */
+  transition: background-color 0.3s;
+}
+.setting-button:hover::before {
+  background-color: #ffffff;
+}
+.setting-button:active::before {
+  background-color: rgb(0, 255, 94);
+}
+.setting-button:active {
+  color: #00ff77;
+}
+
+/* Estilos para el selector de usuarios */
+/* Personaliza según tus necesidades */
+
+/* Estilos para el selector de juegos */
+/* Personaliza según tus necesidades */
+
+/* Estilos para el contenido principal */
+.minecraft-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative; /* Añadimos posición relativa al contenedor principal */
+}
+
+/* Estilos para la imagen rotativa */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Oculta partes de la imagen fuera del contenedor */
+  max-width: 100%; /* Ajusta el tamaño máximo de la imagen según sea necesario */
+  min-height: 60vh; /* Ajusta la altura máxima de la imagen según tus necesidades */
+  max-height: 60vh; /* Ajusta la altura máxima de la imagen según tus necesidades */
+}
+
+.rotating-image {
+  height: 100%;
+  width: 100%;
+  transform: translateX(0); /* Inicialmente sin desplazamiento horizontal */
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Estilos para los indicadores de puntos */
+.dots-container {
+  position: absolute; /* Añadimos posición absoluta para superponer los puntos */
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%; /* Centramos los puntos horizontalmente */
+  transform: translateX(-50%); /* Centramos los puntos horizontalmente */
+  top: 55vh;
+  z-index: 99;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  display: inline-block; /* Mostramos los puntos en línea */
+}
+
+.dot.active {
+  background-color: #00d776;
+}
+
+/* Componente Config del Launchersito */
+.launcher-config h2 {
+  font-family: "MinecraftTen", sans-serif;
+  font-weight: normal;
+}
+.launcher-config {
+  height: 66vh;
+  width: 100%;
+  text-align: center;
+  overflow: auto;
+}
+
+/* Componente Accounts del Launcher*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 1;
+}
+
+.modal {
+  background-color: rgb(35, 35, 35);
+  font-family: "MinecraftTen", sans-serif;
+  font-weight: normal;
+  font-size: x-large;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: grid;
+  gap: 10px;
+  width: 60%;
+  max-height: 50%;
+}
+
+.modal button {
+  font-family: "MinecraftRegular";
+  font-size: large;
+  background-color: #48e692;
+  border: solid #27dca0;
+  outline: none;
+  height: 100%;
+}
+.modal button:hover {
+  background-color: #20a58a;
+}
+.modal input {
+  outline: none;
+  font-family: "Minecraft", sans-serif;
+  font-size: large;
+  border: none;
+}
+.AddAccount {
+  background-color: #48e6ac;
+  border-radius: 10px;
+  border: none;
+  height: 100px;
+  width: 100px;
+}
+/* Accoun Style */ /* Agrega estilos CSS para organizar los cuadros */
+.account-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Máximo de 3 columnas */
+}
+.versions-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.account-box {
+  margin: 10px;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  background-color: #181818;
+  width: auto;
+  max-width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para los cuadros */
+}
+
+.account-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.account-info span {
+  font-size: 16px;
+  font-family: "MinecraftRegular", sans-serif;
+  margin-bottom: 10px;
+}
+
+.account-info img {
+  width: 80px; /* Tamaño de las imágenes de las skins */
+  height: auto;
+  border: 2px solid #201f1f; /* Borde alrededor de las imágenes */
+  border-radius: 50%; /* Hace que las imágenes sean circulares */
+}
+.account-actions button {
+  background: #00d78f;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  font-family: "MinecraftTen";
+  padding-bottom: 5px;
+}
+.account-actions button:hover {
+  background: #0a9b1d;
+}
+.account-actions {
+  display: grid;
+  gap: 3px;
+  margin-top: 15px;
+}
+
+.version-actions {
+  background: #00d752;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  font-family: "MinecraftTen";
+  padding-bottom: 5px;
+}
+.version-actions:hover {
+  background: #0a9b50;
+}
+
+.versionsprjt {
+  font-family: MinecraftItalic;
+  font-size: medium;
+}

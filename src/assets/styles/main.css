@@ -1,0 +1,81 @@
+@font-face {
+  font-family: PixelPlace;
+  src: url('../fonts/pp-font.ttf'); 
+}
+@font-face {
+  font-family: DC;
+  src: url('../fonts/dc-font.ttf');
+}
+@font-face {
+  font-family: 'minecrafti';
+  src: url('../fonts/launcher/minecraft_10.ttf') format('opentype');
+}
+/* Minecraft Fonts */
+@font-face {
+  font-family: 'MinecraftRegular';
+  src: url('../fonts/launcher/MinecraftRegular-Bmg3.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Minecrafter';
+  src: url('../fonts/launcher/Minecrafter.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'Minecraft';
+  src: url('../fonts/launcher/MinecraftRegular-Bmg3.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MinecraftBold';
+  src: url('../fonts/launcher/MinecraftBold-nMK1.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MinecraftBoldItalic';
+  src: url('../fonts/launcher/MinecraftBoldItalic-1y1e.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MinecraftItalic';
+  src: url('../fonts/launcher/MinecraftItalic-R8Mo.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MinecraftTen';
+  src: url('../fonts/launcher/MinecraftTen-VGORe.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Minecraftory';
+  src: url('../fonts/launcher/Minercraftory.ttf') format('truetype');
+}
+/* Profont Windows Fonts */
+@font-face {
+  font-family: 'ProfontWindows';
+  src: url('../fonts/launcher/Profontwindows-L3amg.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ProfontWindowsBold';
+  src: url('../fonts/launcher/ProfontwindowsBold-Eaq14.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'MinecraftTen';
+  src: url('../fonts/launcher/MinecraftTen-VGORe.ttf') format('truetype');
+}
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+a {
+  outline: none;
+}

@@ -1,0 +1,175 @@
+.news-window {
+    height: 66vh;
+    width: 100%;
+    text-align: center;
+    overflow: auto;
+}
+.news-window h2 {
+  font-family: 'Minecraftory', sans-serif;
+  font-weight: normal;
+}
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.news-card {
+    background-color: rgb(19, 19, 19);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-card h2 {
+    font-size: 1.5em;
+}
+
+.news-card p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    font-family: 'ProfontWindows', sans-serif;
+}
+.news-card-fecha {
+    font-size: 1em;
+    margin-bottom: 10px;
+    font-family: 'Minecraft', sans-serif;
+    background-color: rgb(15, 15, 15);
+    background-size: contain;
+}
+
+.news-card img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.news-card button {
+    background-color: rgb(45, 109, 91);
+    font-family: 'Minecraftory', sans-serif;
+    border: none;
+    border-radius: .7rem;
+    padding: 8px;
+    translate: color 3s;
+}
+.news-card button:hover {
+    background-color:#32847c ;
+    transform: translateY(-3px);
+}
+.news-card button:active {
+    background-color: rgb(84, 201, 186);
+}
+
+.support-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+.support-item {
+    background-color: rgb(31, 31, 31);
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.support-item h2 {
+    font-size: 1.5em;
+}
+
+.support-item img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.support-window {
+    height: 66vh;
+    width: 100%;
+    text-align: center;
+    overflow: auto;
+}
+.support-window h2 {
+  font-family: 'Minecraftory', sans-serif;
+  font-weight: normal;
+}
+.support-window p {
+    font-family: 'MinecraftRegular', sans-serif;
+}
+
+.options-button {
+    font-family: 'Minecraftory', sans-serif;
+    border-radius: 3px;
+    border: none;
+    background: #008a94;
+    padding: 3px;
+    margin: 1%;
+}
+.options-button:active {
+    background: #08767d;
+}
+.panelcontrol {
+    background: rgba(0, 0, 0, 0.152);
+    width: 100%;
+    max-height: 50vh;
+    overflow: auto;
+}
+.panelcontrol p {
+    font-family: minecraftory;
+}
+.infopc {
+    overflow: auto; /* Agrega una barra de desplazamiento vertical cuando sea necesario */
+    max-height: 17vh;
+    word-wrap: break-word; /* Envuelve el texto cuando supera el ancho del div */
+    border: 1px solid #ccc; /* Agrega un borde para una mejor apariencia */
+    padding: 10px; /* Agrega un espacio interno para el contenido */
+}
+
+.ram-bar {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #0e0e0e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.slider-container {
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: MinecraftRegular;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: Minecraftory;
+}
+
+input[type="range"] {
+    width: 100%;
+    background-color: #f0f0f0;
+    height: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+input[type="range"]:hover,
+input[type="range"]:focus {
+    background-color: rgb(100, 149, 237); /* Cambia el color de fondo al pasar el ratón o enfocar */
+}
+
+output {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 18px;
+    border: 2px solid rgb(100, 149, 237); /* Agrega un borde RGB */
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: rgb(31, 31, 31)000;
+    font-family: MinecraftRegular;
+}

@@ -1,0 +1,114 @@
+.desktop_navbar {
+    position:fixed;
+    display: flex;
+    height: 4rem;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom:0;
+    background-color: #00000022;
+    z-index: 5;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.desktop_navbar_logo_img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    padding-left: 2rem;
+    padding-right: 1rem;
+}
+
+.desktop_navbar_link {
+    font-size: 1.2rem;
+    padding: .8rem;
+    transition: all .5s;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+.desktop_navbar_link:hover {
+    color: var(--accent1);
+}
+
+.desktop_navbar_link2 {
+    padding:.5rem;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'MinecraftTen', 'ProfontWindows';
+}
+.desktop_navbar_link2_div {
+    font-size: 1.2rem;
+    padding: .8rem;
+    transition: all .5s;
+    margin-left: auto;
+    margin-right: 2rem;
+    font-weight: 700;
+    border: solid 1px var(--accent1);
+    border-radius: var(--roundness);
+    text-align: center;
+}
+.desktop_navbar_link2_div:hover {
+    border: solid 1px var(--accent2);
+    background-color: var(--accent2);
+    transform: scale(1.05)
+}
+
+.mobile_navbar {
+    display: none;
+    overflow: hidden;
+    background-color: #00000033;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    flex-direction: row;
+    min-height: 53px;
+}
+
+.mobile_navbar_logo_img {
+    position: absolute;
+    display: block;
+    height: 42px;
+    padding-left: .5rem;
+    top: 0;
+    left: 0;
+    padding-top: 3.5px;
+}
+
+.mobile_navbar #mobile_navbar_links {
+    display: none;
+    margin-top: 53px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #00000011;
+}
+
+.mobile_navbar_link {
+    padding:.5rem;
+}
+
+.mobile_navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.mobile_navbar .icon {
+    background-color: #00000044;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 16px;
+}
+
+.mobile_navbar_logo_img_a {
+    display: block;
+    background-color: #00000022;
+}

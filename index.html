@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/assets/styles/main.css" />
+    <link rel="stylesheet" href="./src/assets/styles/launcher.css" />
+    <link rel="stylesheet" href="./src/assets/styles/launcher-windows.css" />
+    <title>LibelulaLauncher</title>
+    <style>
+      .overlay {
+        display: none;
+      }
+    </style>
+  </head>
+  <body style="margin: 0px">
+    <div>
+      <header class="minecraft-header">
+        <div class="header-logo">
+          <img
+            src="./src/assets/textures/icons/app/blueprint.png"
+            alt="Minecraft Logo"
+            class="icon-launcher"
+          />
+        </div>
+        <nav class="header-nav">
+          <ul>
+            <li><a id="inicio-button">Inicio</a></li>
+            <li><a id="news-button">AdeptusTeam</a></li>
+            <li style="display: none"><a id="support-button">Soporte</a></li>
+            <li style="display: none"><a id="download-button">Descargar</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div style="display: flex; align-items: stretch">
+        <div class="minecraft-sidebar">
+          <div class="settings" id="usuario-settings">
+            <div style="display: flex">
+              <img
+                src="./src/assets/textures/icons/user-ico.png"
+                alt="User Icon"
+                class="settings-icon"
+              />
+              <h2>Usuario</h2>
+              <img
+                src="./src/assets/textures/icons/expanded-ico.png"
+                alt="Expand Icon"
+                class="settings-icon"
+                onclick="toggleExpanded1()"
+                id="expand-button1"
+              />
+            </div>
+            <div
+              class="settings-buttons1"
+              style="display: none"
+              id="usuario-buttons"
+            >
+              <button class="setting-button" id="accounts-window-button">
+                Cuentas
+              </button>
+            </div>
+          </div>
+
+          <div class="settings">
+            <div style="display: flex">
+              <img
+                src="./src/assets/textures/icons/config.png"
+                alt="Settings Icon"
+                class="settings-icon"
+              />
+              <h2>Settings</h2>
+              <img
+                src="./src/assets/textures/icons/expanded-ico.png"
+                alt="Expanded Icon"
+                class="settings-icon"
+                onclick="toggleExpanded()"
+                id="expand-button"
+              />
+            </div>
+            <div class="settings-buttons" style="display: none">
+              <button class="setting-button" id="gameconfig-button">
+                Normal
+              </button>
+              <button class="setting-button" id="launcherconfig-button">
+                Launcher
+              </button>
+              <button class="setting-button" id="advancedconfig-button">
+                Avanzed
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="minecraft-main" id="minecraft-main">
+          <div class="image-container">
+            <img alt="Image 1" class="rotating-image" />
+            <div class="dots-container"></div>
+          </div>
+        </div>
+        <div class="launcher-config" id="launcher-config" style="display: none">
+          <h2>Launcher Settings</h2>
+          <hr />
+          <div class="ram-bar">
+            <div class="slider-container">
+              <label for="min-ram">RAM Mínimo:</label>
+              <input type="range" id="min-ram" min="1" max="12" value="1" />
+              <output id="min-ram-value">2</output> MB
+            </div>
+            <div class="slider-container">
+              <label for="max-ram">RAM Máximo:</label>
+              <input type="range" id="max-ram" min="1" max="12" value="12" />
+              <output id="max-ram-value">7</output> MB
+            </div>
+          </div>
+        </div>
+        <div class="launcher-config" id="game-config" style="display: none">
+          <h2>Game Settings</h2>
+          <hr />
+          <p class="versionsprjt">Projects Versions</p>
+          <div class="versions-list" id="versions-mng-list"></div>
+        </div>
+        <div
+          class="launcher-config"
+          id="advanced-game-config"
+          style="display: none; overflow: hidden"
+        >
+          <h2>Advanced Settings</h2>
+          <hr />
+          <div class="optionscontainer">
+            <div id="launcherpc" class="panelcontrol">
+              <p>Debug</p>
+              <div id="debugpc" class="infopc"></div>
+              <p>Progress</p>
+              <div id="progresspc" class="infopc"></div>
+              <p>Download</p>
+              <div id="downloadpc" class="infopc"></div>
+            </div>
+            <div id="minecraftpc" class="panelcontrol" style="display: none">
+              <p>Data</p>
+              <div id="datapc" class="infopc"></div>
+              <p>Close</p>
+              <div id="closepc" class="infopc"></div>
+              <p>Error</p>
+              <div id="errorpc" class="infopc"></div>
+            </div>
+            <button class="options-button" onclick="showLauncherPc()">
+              Launcher Console
+            </button>
+            <button class="options-button" onclick="showMineCraftPc()">
+              Minecraft Console
+            </button>
+            <script>
+              function showLauncherPc() {
+                document.getElementById("launcherpc").style = "display : block";
+                document.getElementById("minecraftpc").style =
+                  "display : none;";
+              }
+              function showMineCraftPc() {
+                document.getElementById("launcherpc").style =
+                  "display : none; ";
+                document.getElementById("minecraftpc").style =
+                  "display : block;";
+              }
+            </script>
+          </div>
+        </div>
+        <div class="news-window" id="news-window" style="display: none">
+          <h2>AdeptusTeam</h2>
+          <hr />
+          <div class="news-container">
+            <div class="news-card">
+              <h2>Content Creation</h2>
+              <p>
+                We are a dedicated team focused on creating content in
+                Minecraft, animations, programming, illustration, and building.
+                We specialize in projects that require assistance in various
+                areas such as mod/plugin creation, trailers, resource packs, and
+                more. We also have experience in creating events, servers, and
+                networks, all with unique features.
+              </p>
+              <p>Contact with us:</p>
+              <a href="https://adeptus-team.web.app/" target="_blank"
+                >Website</a
+              >
+              <br />
+              <a href="https://adeptusteam.craftingstore.net/" target="_blank"
+                >Crafting Store</a
+              >
+              <br />
+              <a href="https://discord.gg/79GKUrQ6cm" target="_blank"
+                >Discord</a
+              >
+
+              <div class="news-card-fecha">November 14, 2023</div>
+            </div>
+            <!-- Agrega más actualizaciones aquí -->
+            <div class="news-container">
+              <div class="news-card">
+                <h2>Why us?</h2>
+                <p style="text-align: left">
+                  <span
+                    >We are a passionate Minecraft team that crafts exceptional
+                    content. From impressive constructions to captivating
+                    animations, our talents come together to deliver astonishing
+                    results.</span
+                  >
+                  <br />
+                  <br />
+                  <span
+                    >We organize exciting events and design custom servers
+                    backed by expert managers. Our programmers not only focus on
+                    mods and plugins but are also skilled in applications,
+                    websites, and languages like Python.</span
+                  >
+                  <br />
+                  <br />
+                  <span
+                    >We prioritize quality in every detail and work closely
+                    together to bring your vision to life. Choose our team to
+                    take your Minecraft ideas to the next level. Contact us, and
+                    let's work magic in the world of blocks!</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="news-window" id="download-window" style="display: none">
+          <h2>Descargar</h2>
+          <hr />
+          <div class="news-container">
+            <div class="news-card">
+              <h2>1.0.0 Update - Blueprint Beta</h2>
+              <div class="news-card-fecha">6 septiembre del 2023</div>
+              <button>
+                <a href="https://github.com/AdeptusTeam/Blueprint-Studio"
+                  >Obtener</a
+                >
+              </button>
+            </div>
+            <!-- Agrega más actualizaciones aquí -->
+          </div>
+        </div>
+        <div class="launcher-config" id="accounts-window" style="display: none">
+          <h2>Accounts</h2>
+          <hr />
+          <div class="account-list">
+            <!-- Aquí se generarán dinámicamente los elementos de la lista de cuentas -->
+          </div>
+          <button onclick="toggleAccountSelectCreation()" class="AddAccount">
+            +
+          </button>
+          <div id="selectcreationoverlay" class="overlay" style="display: none">
+            <div class="modal">
+              <h3>Select Account Type</h3>
+              <button onclick="CreateAccountPremium()">Premium</button>
+              <button onclick="toggleAccountCreation()">No Premium</button>
+            </div>
+            <div id="creationoverlay" class="overlay" style="display: none">
+              <div class="modal">
+                <h3>Enter Account Name</h3>
+                <input
+                  type="text"
+                  id="accountNameInput"
+                  placeholder="Account Name"
+                  value=""
+                />
+                <div
+                  id="errorText"
+                  style="
+                    color: red;
+                    font-family: Minecraftory;
+                    font-size: medium;
+                  "
+                ></div>
+                <button id="saveAccount">Save</button>
+              </div>
+              <script>
+                // Función para desactivar el div con la ID "overlay"
+                function desactivarOverlay() {
+                  const overlay = document.getElementsByClassName("overlay");
+                  overlay.style.display = "none";
+                }
+
+                // Escuchar el evento de presionar la tecla Escape
+                document.addEventListener("keydown", function (event) {
+                  if (event.keyCode === 27) {
+                    desactivarOverlay();
+                  }
+                });
+              </script>
+              <script>
+                const accountNameInput =
+                  document.getElementById("accountNameInput");
+                const errorText = document.getElementById("errorText");
+                const saveButton = document.getElementById("saveAccount");
+
+                accountNameInput.addEventListener("input", function () {
+                  const inputValue = accountNameInput.value;
+
+                  // Validar la longitud del nombre de la cuenta
+                  if (inputValue.length < 3 || inputValue.length > 16) {
+                    errorText.textContent =
+                      "El nombre debe tener entre 3 y 16 caracteres.";
+                    saveButton.disabled = true;
+                  } else if (!/^[a-zA-Z0-9_\-]+$/.test(inputValue)) {
+                    // Permitir letras, números, guiones bajos y guiones
+                    errorText.textContent =
+                      "El nombre solo puede contener letras, números y guiones.";
+                    saveButton.disabled = true;
+                  } else {
+                    errorText.textContent = ""; // Si la entrada es válida, borrar el mensaje de error
+                    saveButton.disabled = false; // Habilitar el botón "Save"
+                  }
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="support-window" id="support-window" style="display: none">
+          <ul class="support-list">
+            <li>
+              <div class="support-item">
+                <h2>Preguntas frecuentes</h2>
+                <p></p>
+              </div>
+              <!-- Agrega más actualizaciones de soporte aquí -->
+            </li>
+          </ul>
+        </div>
+      </div>
+      <footer class="minecraft-footer">
+        <div class="footer-version">
+          <label for="version-select">Project</label>
+          <select id="version-select"></select>
+        </div>
+        <button id="launchmc" class="start-button" onclick="ManagLaunch()">
+          INICIAR
+        </button>
+        <img
+          src="./src/assets/textures/icons/loading.gif"
+          alt="Loading"
+          style="display: none"
+          id="loadingicon"
+        />
+        <p class="playerName">Player</p>
+      </footer>
+    </div>
+  </body>
+  <script src="./src/app/util/scripts/launcherwindowsmanager.js"></script>
+  <script src="./src/app/util/scripts/sidebar.js"></script>
+  <script src="./src/app/util/scripts/slider.js"></script>
+  <!-- <script src="../../../services/launcher/client.js"></script> -->
+  <script src="./src/app/services/launcher/accounts.js"></script>
+  <script src="./src/app/services/launcher/renderer.js"></script>
+  <script src="./src/app/services/rpc/launcher.js"></script>
+</html>
