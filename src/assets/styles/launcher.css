@@ -1,5 +1,24 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(45deg, #87ceeb, #98fb98, #dbfe72, #add8e6);
+  background-size: 400% 400%;
+  animation: cambioColores 10s infinite;
+}
+
+@keyframes cambioColores {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .minecraft-header {
-  background-color: #272727;
+  background-color: #27272730;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,7 +61,7 @@
 
 /* Estilos para el footer */
 .minecraft-footer {
-  background-color: #333;
+  background-color: #27272730;
   color: #fff;
   padding: 10px 20px;
   max-height: 10vh;
@@ -70,7 +89,7 @@
   font-weight: normal;
   font-size: small;
   padding: 5px;
-  background-color: #444;
+  background-color: #44444427;
   color: #fff;
   outline: none;
   border: none;
@@ -89,6 +108,7 @@
 .start-button {
   background-color: #00d748;
   border: #00ffa2;
+  border-radius: 5px;
   color: #fff;
   border: none;
   padding: 10px 20px 20px;
@@ -119,11 +139,12 @@
 .playerName {
   font-family: "MinecraftRegular";
   color: white;
+  font-size: large;
 }
 
 /* Estilos para el sidebar */
 .minecraft-sidebar {
-  background-color: #333;
+  background-color: #27272759;
   color: #fff;
   width: 200px;
   height: 65vh;
