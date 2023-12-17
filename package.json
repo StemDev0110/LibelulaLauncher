@@ -1,7 +1,7 @@
 {
   "name": "LibelulaLauncher",
   "productname": "LibelulaLauncher",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "type": "commonjs",
   "description": "Applicacion de AdeptusTeam, echa para crear complementos para minecraft y trabajo, contando con un launcher y software libre de uso para hacer modificaciones en minecraft.",
   "author": "stemvirus <virusstem.contact@gmail.com>",
