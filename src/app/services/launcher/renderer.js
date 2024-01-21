@@ -361,6 +361,13 @@ function updateConfigFile(minRam, maxRam) {
 
 
 async function ManagLaunch() {
+  // Verificar si la carpeta 'projects' no existe y crearla si es necesario
+  const projectsDirectory = path.join(minecraftDirectory, 'projects');
+  if (!fs.existsSync(projectsDirectory)) {
+    fs.mkdirSync(projectsDirectory);
+} else {
+
+
   if (selectedVersion && receivedData[selectedVersion]) {
     // Obtiene los datos necesarios para iniciar Minecraft
     const startbutton = document.getElementById('launchmc');
@@ -690,6 +697,7 @@ async function getCurrentSessionAccount() {
       };
     };
   });
+}
 }
 
 try {
